@@ -22,12 +22,15 @@ const Drawer = ({ children, open, setOpen, title }: IDrawer) => {
 
     if (open) {
       document.addEventListener("mousedown", handleClickOutside);
+      document.body.style.overflow = 'hidden';
     } else {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.body.style.overflow = '';
     }
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.body.style.overflow = ''; // Ensure scrolling is restored on cleanup
     };
   }, [open, setOpen]);
   return (

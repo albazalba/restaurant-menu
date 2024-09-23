@@ -39,6 +39,8 @@ const mockMenuData = {
 // Mock console.log
 console.log = jest.fn();
 
+
+
 describe('MenuPage', () => {
   beforeEach(() => {
     localStorage.clear();

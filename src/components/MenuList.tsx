@@ -50,17 +50,20 @@ export default function MenuList({
                 {item.description}
               </p>
               <p className="mt-2 text-fontPrimary">
-                <div>
-                  <span className=" font-bold ">
-                    AED {formatPrice(item.price * (1 - item.discount_rate))}
+                <span className=" font-bold ">
+                  AED {formatPrice(item.price * (1 - item.discount_rate))}
+                </span>
+                {item.discount_rate > 0 && (
+                  <span className="ml-2 text-fontLight line-through text-sm">
+                    AED {formatPrice(item.price)}
                   </span>
-                  {item.discount_rate > 0 && (
-                    <span className="ml-2 text-fontLight line-through text-sm">
-                      AED {formatPrice(item.price)}
-                    </span>
-                  )}
-                </div>
+                )}
               </p>
+              {item?.stock?.availability && (
+                <p className="text-xs text-fontLight ellipsis-2-lines">
+                  Available stock: {item.stock.availability - itemCount}
+                </p>
+              )}
             </div>
             <div className="w-32 h-24 object-cover relative shrink-0 flex justify-center items-center">
               {item.photo && (
