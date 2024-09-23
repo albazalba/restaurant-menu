@@ -26,6 +26,12 @@ The application is deployed and can be accessed at:
 
 [https://restaurant-menu-one-alpha.vercel.app/](https://restaurant-menu-one-alpha.vercel.app/)
 
+## Tech Stack
+
+- **Next.js**: A React framework for server-side rendering and static site generation.
+- **Tailwind CSS**: A utility-first CSS framework for styling.
+- **Jest**: A testing framework for JavaScript.
+
 ## Testing
 
 To run the test suite:
