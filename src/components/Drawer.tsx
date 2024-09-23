@@ -23,7 +23,6 @@ const Drawer = ({ children, open, setOpen, title }: IDrawer) => {
     if (open) {
       document.addEventListener("mousedown", handleClickOutside);
     } else {
-      // Ensure to remove the event listener when the drawer is closed
       document.removeEventListener("mousedown", handleClickOutside);
     }
 
@@ -37,6 +36,7 @@ const Drawer = ({ children, open, setOpen, title }: IDrawer) => {
       className={`p-5 z-50 rounded-t-md overflow-auto custom-shadow fixed bottom-0 left-0 w-full bg-white shadow-lg transition-transform duration-300 ${
         open ? "translate-y-0" : "translate-y-full"
       }`}
+      data-testid="drawer"
       style={{ height: "100vh" }}
     >
       <div className="container mx-auto">

@@ -2,11 +2,11 @@ import { MenuItem } from "@/types/types";
 import Image from "next/image";
 
 interface MenuListProps {
-  items: MenuItem[];
-  onAddToBasket: (item: MenuItem) => void;
-  onRemoveFromBasket: (item: MenuItem) => void;
-  basket: { [key: string]: number };
-  categoryName: string;
+  readonly items: MenuItem[];
+  readonly onAddToBasket: (item: MenuItem) => void;
+  readonly onRemoveFromBasket: (item: MenuItem) => void;
+  readonly basket: { [key: string]: number };
+  readonly categoryName: string;
 }
 
 export default function MenuList({
@@ -20,7 +20,7 @@ export default function MenuList({
   const getItemCount = (item: MenuItem) => basket[item.id] || 0;
 
   if (items.length <= 0) {
-    return ""
+    return "";
   }
 
   return (
@@ -50,7 +50,7 @@ export default function MenuList({
                 {item.description}
               </p>
               <p className="mt-2 text-fontPrimary">
-                <>
+                <div>
                   <span className=" font-bold ">
                     AED {formatPrice(item.price * (1 - item.discount_rate))}
                   </span>
@@ -59,7 +59,7 @@ export default function MenuList({
                       AED {formatPrice(item.price)}
                     </span>
                   )}
-                </>
+                </div>
               </p>
             </div>
             <div className="w-32 h-24 object-cover relative shrink-0 flex justify-center items-center">
