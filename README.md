@@ -39,6 +39,26 @@ For test coverage information:
 ```
 npm run coverage
 ```
+Below is the test coverage report for the current implementation:
+
+| File             | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s |
+|------------------|---------|----------|---------|---------|-------------------|
+| **All files**     |   99.53 |    96.22 |     100 |   99.53 |                   |
+| **app/icons**     |     100 |      100 |     100 |     100 |                   |
+| BackArrow.tsx     |     100 |      100 |     100 |     100 |                   |
+| SearchIcon.tsx    |     100 |      100 |     100 |     100 |                   |
+| **components**    |   99.46 |    96.07 |     100 |   99.46 |                   |
+| Basket.tsx        |     100 |      100 |     100 |     100 |                   |
+| Drawer.tsx        |     100 |      100 |     100 |     100 |                   |
+| MenuList.tsx      |     100 |      100 |     100 |     100 |                   |
+| MenuPage.tsx      |   98.57 |    89.47 |     100 |   98.57 | 59-60             |
+
+## Test Results
+
+- **Test Suites**: 4 passed, 4 total
+- **Tests**: 30 passed, 30 total
+- **Snapshots**: 0 total
+- **Time**: 1.457 s, estimated 2 s
 
 ## Design Additions
 <img width="292" alt="Screenshot 2024-09-23 at 3 29 03 PM" src="https://github.com/user-attachments/assets/f7cbdf14-c39f-47c7-8eeb-54dd894928d0">
