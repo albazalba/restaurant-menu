@@ -88,7 +88,7 @@ export default function MenuPage({ menuData }: MenuPageProps) {
             <button onClick={() => setDrawerOpen(true)} className="relative"  data-testid="cart">
               <ShoppingCart />
               {Object.keys(basket).length > 0 && (
-                <span className="absolute top-[-5px] right-[-5px] bg-red-500 text-white text-xs rounded-full p-2 h-3 w-3 flex items-center justify-center">
+                <span className="absolute top-[-5px] right-[-5px] bg-red-500 text-white text-[10px] rounded-full p-2 h-3 w-3 flex items-center justify-center">
                   {Object.values(basket).reduce((a, b) => a + b, 0)}
                 </span>
               )}
