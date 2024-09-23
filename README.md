@@ -41,6 +41,9 @@ npm run coverage
 ```
 
 ## Design Additions
+<img width="292" alt="Screenshot 2024-09-23 at 3 29 03 PM" src="https://github.com/user-attachments/assets/f7cbdf14-c39f-47c7-8eeb-54dd894928d0">
+<img width="292" alt="Screenshot 2024-09-23 at 3 35 13 PM" src="https://github.com/user-attachments/assets/24f8a4ee-9a29-4c93-a7e5-485f01fe35a9">
+
 
 The following design elements have been added to enhance user experience:
 
