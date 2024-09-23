@@ -14,7 +14,6 @@ async function getMenuData(): Promise<MenuData> {
 
 export default async function Home() {
   const menuData = await getMenuData();
-  console.log("🚀 ~ Home ~ menuData:", menuData)
   return (
     <div className="bg-white text-black">
       <MenuPage menuData={menuData} />
