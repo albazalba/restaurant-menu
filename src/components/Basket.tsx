@@ -1,4 +1,3 @@
-// app/components/Basket.tsx
 import { MenuItem } from "@/types/types";
 import Image from "next/image";
 
@@ -24,7 +23,7 @@ export default function Basket({ items, basket }: BasketProps) {
         <div key={item.id} className="flex items-center mb-4 pb-4 border-b">
           {item.photo && (
             <Image
-              src={item.photo || "/placeholder.svg?height=60&width=60"}
+              src={item.photo}
               alt={item.name}
               width={60}
               height={60}

@@ -82,17 +82,17 @@ export default function MenuPage({ menuData }: MenuPageProps) {
       <div className="sticky top-0 bg-white z-20">
         <header className="py-4 px-4">
           <div className="flex justify-between">
-            <button onClick={handleReset} className="">
+            <button onClick={handleReset} className="" data-testid="reset">
               <BackArrow />
             </button>
-            <p onClick={() => setDrawerOpen(true)} className="relative">
+            <button onClick={() => setDrawerOpen(true)} className="relative"  data-testid="cart">
               <ShoppingCart />
               {Object.keys(basket).length > 0 && (
                 <span className="absolute top-[-5px] right-[-5px] bg-red-500 text-white text-xs rounded-full p-2 h-3 w-3 flex items-center justify-center">
                   {Object.values(basket).reduce((a, b) => a + b, 0)}
                 </span>
               )}
-            </p>
+            </button>
           </div>
 
           <h1 className="text-2xl font-bold mt-4">Search</h1>
