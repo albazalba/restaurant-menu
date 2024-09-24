@@ -1,6 +1,8 @@
 // app/page.tsx
 import MenuPage from "@/components/MenuPage";
 import { MenuData } from "../types/types";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 async function getMenuData(): Promise<MenuData> {
   const res = await fetch(
@@ -16,7 +18,9 @@ export default async function Home() {
   const menuData = await getMenuData();
   return (
     <div className="bg-white text-black">
-      <MenuPage menuData={menuData} />
+      <Suspense fallback={<Loading />}>
+        <MenuPage menuData={menuData} />
+      </Suspense>
     </div>
   );
 }
