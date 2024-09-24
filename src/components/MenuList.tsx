@@ -59,7 +59,7 @@ export default function MenuList({
                   </span>
                 )}
               </p>
-              {item?.stock?.availability && (
+              {item?.stock && item?.stock?.availability > 0 && (
                 <p className="text-xs text-fontLight ellipsis-2-lines">
                   Available stock: {item.stock.availability - itemCount}
                 </p>
